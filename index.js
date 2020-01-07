@@ -2,10 +2,10 @@ console.log ("hello");
 const inquirer = require ("inquirer")
 
 //required
-const Engineer = require("./lib/Engineer")
-const Intern = require("./lib/Intern")
-const Manager = require("./lib/Manager")
-const Employee = require("./lib/Employee")
+const Engineer = require("./Develop/lib/Engineer")
+const Intern = require("./Develop/lib/Intern")
+const Manager = require("./Develop/lib/Manager")
+const Employee = require("./Develop/lib/Employee")
 
 inquire
 .prompt([
@@ -15,8 +15,8 @@ inquire
         message: "What is the employee name?",
     },
     {
-        type: 'input'
-        name: 'email'
+        type: 'input',
+        name: 'email',
         message: "What is the employee's email?"
     }
     

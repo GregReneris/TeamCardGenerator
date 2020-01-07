@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "jest",
-    "test2": "jest test/Employee.test.js"
+    "test2": "jest test/Intern.test.js"
   },
   "repository": {
     "type": "git",
