@@ -1,4 +1,5 @@
 const Employee = require("./Employee");
+const inquirer = require ("inquirer")
 
 class Manager extends Employee {
     constructor(name, id, email, officeNumber){
@@ -13,6 +14,21 @@ class Manager extends Employee {
     getRole(){
         return "Manager";
     }
+
+    async Inquirer(){   
+        await super.Inquirer();
+        return inquirer.prompt(
+            {
+                type: 'input',
+                name: 'officeNumber',
+                message: "What is the Manager's Office Number?"
+            }).then(answers =>{
+                console.log(answers);
+                this.officeNumber = answers.officeNumber;
+            });
+    
+    }
+
 
 }
 
