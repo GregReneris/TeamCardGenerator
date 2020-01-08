@@ -75,6 +75,13 @@ function HtmlCreate(employees){
             margin-right: 12px;
         }
 
+        .kitten {
+            background:white;
+            width: 205px;
+            height: 105px;
+            border-radius: 4px;
+            padding: 5px; 
+        }
 
         .wrapper {
             display: flex;
@@ -91,8 +98,17 @@ function HtmlCreate(employees){
 
     employees.forEach(element => {
         
+        hash = element.name.hashCode();
+        x = hash % 100;
+        w = 200+ Math.floor( x / 10 );
+        h = 100+ x % 10;
+
+
         card = `<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
         <div class="card-header">
+            <center>
+                <img class="kitten" src="http://placekitten.com/${w}/${h}" alt="cat picture">
+            </center>
             <h2><b>${element.name}</b></h2>
             <h3> <i class="${element.getRoleIcon()}"></i> ${element.getRole()}</h3>
         </div>
