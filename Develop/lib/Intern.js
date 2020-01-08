@@ -11,6 +11,14 @@ class Intern extends Employee{
     getRole(){
         return "Intern";
     }
+    
+    getHtml3(){
+        return "School: "+ this.school;
+    }
+
+    getRoleIcon(){
+        return "fas fa-book-reader";
+    }
 
     getSchool(){
         return this.school;

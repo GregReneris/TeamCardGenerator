@@ -12,6 +12,14 @@ class Engineer extends Employee{
         return "Engineer";
     }
 
+    getRoleIcon(){
+        return "fas fa-glasses";
+    }
+    
+    getHtml3(){
+        return "Github: <a href='https://github.com/"+this.github+"'>"+this.github+"</a>";
+    }
+
     getGithub(){
         return this.github;
     }

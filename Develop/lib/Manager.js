@@ -11,6 +11,14 @@ class Manager extends Employee {
         return this.officeNumber;
     }
 
+    getRoleIcon(){
+        return "fas fa-coffee";
+    }
+
+    getHtml3(){
+        return "Office Number: "+ this.officeNumber;
+    }
+
     getRole(){
         return "Manager";
     }

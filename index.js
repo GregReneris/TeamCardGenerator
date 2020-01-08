@@ -1,5 +1,6 @@
 const inquirer = require ("inquirer")
 const HtmlCreate = require("./Develop/lib/HtmlCreate");
+const fs = require("fs");
 
 //required
 
@@ -38,9 +39,10 @@ const employees = [];
             } else {
             
                 //builds HTML HERE
-                HtmlCreate(employees);
-                //console.log ("Got here88888****************************************")
-                //console.log(employees)
+                HTML = HtmlCreate(employees);
+                fs.writeFile("./output/Team.html", HTML,  (err) => {
+                    if (err) throw err;
+                });
                             
             }
             

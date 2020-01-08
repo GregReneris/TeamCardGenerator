@@ -1,8 +1,4 @@
-
-function HtmlCreate(employees){
-    console.log("got to html create");
-
-    html = `<!DOCTYPE html>
+<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8" />
@@ -22,9 +18,52 @@ function HtmlCreate(employees){
 
         <body>
             <br>
-            <div class="wrapper">`;
-
-    end =`</div>
+            <div class="wrapper"><div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+            <h2><b>bob</b></h2>
+            <h3> <i class="fas fa-coffee"></i> Manager</h3>
+        </div>
+        <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: 12</li>
+            <li class="list-group-item">Email: <a href="mailto:bob@bob">bob@bob</a></li>
+            <li class="list-group-item">Office Number: 99</li>
+        </ul>
+        </div>
+        </div>
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+            <h2><b>ken</b></h2>
+            <h3> <i class="fas fa-glasses"></i> Engineer</h3>
+        </div>
+        <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: 4</li>
+            <li class="list-group-item">Email: <a href="mailto:ken@ken.com">ken@ken.com</a></li>
+            <li class="list-group-item">Github: <a href='https://github.com/gregreneris'>gregreneris</a></li>
+        </ul>
+        </div>
+        </div>
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+            <h2><b>ko</b></h2>
+            <h3> <i class="fas fa-book-reader"></i> Intern</h3>
+        </div>
+        <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: 11</li>
+            <li class="list-group-item">Email: <a href="mailto:4@4">4@4</a></li>
+            <li class="list-group-item">School: kkkkkkaaaaaaalllllllllll</li>
+        </ul>
+        </div>
+        </div>
+        </div>
         </body>
         </html>
 
@@ -87,37 +126,4 @@ function HtmlCreate(employees){
             background-color: lightgrey;
         }
 
-        </style>`;
-
-
-    employees.forEach(element => {
-        
-        card = `<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-            <h2><b>${element.name}</b></h2>
-            <h3> <i class="${element.getRoleIcon()}"></i> ${element.getRole()}</h3>
-        </div>
-        <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${element.id}</li>
-            <li class="list-group-item">Email: <a href="mailto:${element.email}">${element.email}</a></li>
-            <li class="list-group-item">${element.getHtml3()}</li>
-        </ul>
-        </div>
-        </div>
-        `;
-
-        html = html+card;
-        
-    });
-
-    return html+end;
-
-}
-
-    module.exports = HtmlCreate;
-
- 
-
+        </style>
