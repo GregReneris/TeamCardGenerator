@@ -31,7 +31,7 @@ class Manager extends Employee {
                 name: 'officeNumber',
                 message: "What is the Manager's Office Number?"
             }).then(answers =>{
-                console.log(answers);
+                
                 this.officeNumber = answers.officeNumber;
             });
     

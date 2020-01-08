@@ -14,7 +14,7 @@ const employees = [];
 
 
  function getNextCard(){
-     console.log("")
+     
     return inquirer.prompt(
         {    
             type: 'list',
@@ -28,7 +28,7 @@ const employees = [];
               ]
         }    
     ).then(answer =>{
-            console.log(answer.Role);
+            
             if(answer.Role in employeeType){
                 employee = new employeeType[ answer.Role ];
                 employee.Inquirer().then( x => { 

@@ -1,6 +1,5 @@
 
 function HtmlCreate(employees){
-    console.log("got to html create");
 
     html = `<!DOCTYPE html>
         <html lang="en">

@@ -32,7 +32,7 @@ class Engineer extends Employee{
                 name: 'github',
                 message: "What is the Engineers GitHub Username?"
             }).then(answers =>{
-                console.log(answers);
+                
                 this.github = answers.github;
             });
     

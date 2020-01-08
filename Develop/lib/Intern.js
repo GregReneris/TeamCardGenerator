@@ -32,7 +32,6 @@ class Intern extends Employee{
                 name: 'school',
                 message: "What is the Intern's School?"
             }).then(answers =>{
-                console.log(answers);
                 this.school = answers.school;
             });
     

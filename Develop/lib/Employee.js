@@ -45,7 +45,7 @@ class Employee {
 
         }
         ]).then(answers =>{
-            console.log(answers);
+         
             this.name = answers.name;
             this.id = answers.id;
             this.email = answers.email;
